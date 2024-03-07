@@ -1,3 +1,4 @@
+//Fade-in For the different sections on the website
 document.addEventListener("DOMContentLoaded", function() {
     const navLinks = document.querySelectorAll('nav a');
   
@@ -30,21 +31,44 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
+  // Cycle animation for testimonials
   $(document).ready(function() {
-    // Function to cycle through testimonials
     function showTestimonial(index) {
-      $('.testimonial').removeClass('active'); // Hide all testimonials
-      $('.testimonial').eq(index).addClass('active'); // Show the testimonial at the given index
+      $('.testimonial').removeClass('active'); 
+      $('.testimonial').eq(index).addClass('active');
     }
-  
-    var currentTestimonialIndex = 0; // Initialize index of the current testimonial
-  
-    // Initial display of the first testimonial
+
+    var currentTestimonialIndex = 0;
     showTestimonial(currentTestimonialIndex);
   
     // Set interval to cycle through testimonials
     setInterval(function() {
-      currentTestimonialIndex = (currentTestimonialIndex + 1) % $('.testimonial').length; // Increment index and loop back to 0 if needed
-      showTestimonial(currentTestimonialIndex); // Show the next testimonial
+      currentTestimonialIndex = (currentTestimonialIndex + 1) % $('.testimonial').length;
+      showTestimonial(currentTestimonialIndex);
     }, 5000); // Adjust interval duration as needed (in milliseconds)
+  });
+
+  $(document).ready(function() {
+    function isElementInViewport(el) {
+      var rect = el.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+
+    function fadeInElements() {
+      $('.service-img').each(function() {
+        if (isElementInViewport(this)) {
+          $(this).addClass('visible');
+        }
+      });
+    }
+
+    fadeInElements();
+    $(window).on('scroll', function() {
+      fadeInElements();
+    });
   });

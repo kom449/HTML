@@ -2,7 +2,7 @@
 body {
 	font-family: 'Roboto', sans-serif;
 	background-color: #f9f9f9; /* Set background color */
-	padding-top: 56px; /* Ensure content is not hidden under the navbar */
+	padding-top: 56px;
   }
   
   .banner img {
@@ -29,9 +29,9 @@ body {
 /* Header Styles */
 .banner img {
 	width: 100%;
-	display: block; /* Ensure image fills the entire width */
-  	max-height: 500px; /* Adjust the maximum height as needed */
-  	height: auto; /* Allow the image to adjust its height while maintaining aspect ratio */
+	display: block;
+  	max-height: 500px;
+  	height: auto;
   }
   
   /* Services Section Styles */
@@ -55,7 +55,7 @@ body {
   /* Portfolio Section Styles */
 #portfolio {
 	background-color: #fff; /* Set background color for portfolio section */
-	padding: 50px 0; /* Add padding to top and bottom */
+	padding: 50px 0;
   }
   
   #portfolio .row {
@@ -65,14 +65,25 @@ body {
   #portfolio img {
 	width: 100%;
 	border-radius: 10px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
-	transition: transform 0.3s ease; /* Add transition for smooth hover effect */
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease;
   }
   
   #portfolio img:hover {
-	transform: scale(1.05); /* Scale image on hover */
+	transform: scale(1.05);
   }
-	  
+
+  /* Services section */
+  .service-img {
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
+  }
+  
+  .service-item:hover .service-img {
+	opacity: 1;
+  }
+	 
+  
 /* Animation for fade in */
 .fade-in {
 	opacity: 0; /* Initially hide elements */
@@ -101,24 +112,24 @@ body {
 /* Testimonials styles */
 .testimonials {
 	position: relative;
-	overflow: hidden; /* Hide overflow to hide extra testimonials */
-	height: 200px; /* Adjust the height as needed */
-	margin: 0 auto; /* Center the container horizontally */
-	background-color: #fff; /* Set background color for testimonials section */
-	border-radius: 10px; /* Add border radius for a modern look */
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+	overflow: hidden;
+	height: 200px;
+	margin: 0 auto;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
   .testimonial {
 	position: absolute;
 	top: 0;
-	left: 50%; /* Start position - center horizontally */
-	transform: translateX(-50%); /* Center horizontally */
+	left: 50%; 
+	transform: translateX(-50%);
 	width: 100%;
 	opacity: 0;
 	transition: opacity 1s ease;
-	padding: 20px; /* Add padding for testimonial content */
-	text-align: center; /* Center align content */
+	padding: 20px;
+	text-align: center;
   }
   
   .testimonial.active {
