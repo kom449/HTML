@@ -1,0 +1,149 @@
+/* Global Styles */
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: #f9f9f9; /* Set background color */
+	padding-top: 56px; /* Ensure content is not hidden under the navbar */
+  }
+  
+  .banner img {
+	width: 100%;
+  }
+  
+  section {
+	opacity: 0; /* Initially set opacity to 0 */
+  }
+	  
+/* Navbar Styles */
+.navbar {
+	background-color: #333; /* Set navbar background color */
+  }
+  
+  .navbar-brand {
+	margin-right: auto; /* Push brand/logo to the left */
+  }
+  
+  .navbar-nav .nav-link {
+	color: #fff; /* Set navbar link color */
+  }
+  
+/* Header Styles */
+.banner img {
+	width: 100%;
+	display: block; /* Ensure image fills the entire width */
+  	max-height: 500px; /* Adjust the maximum height as needed */
+  	height: auto; /* Allow the image to adjust its height while maintaining aspect ratio */
+  }
+  
+  /* Services Section Styles */
+  #services .col-md-4 {
+	text-align: center;
+  }
+  
+  #services img {
+	width: 200px;
+	height: 200px;
+  }
+  
+  #services h3 {
+	margin-top: 20px;
+  }
+  
+  #services p {
+	margin-bottom: 20px;
+  }
+
+  /* Portfolio Section Styles */
+#portfolio {
+	background-color: #fff; /* Set background color for portfolio section */
+	padding: 50px 0; /* Add padding to top and bottom */
+  }
+  
+  #portfolio .row {
+	margin-top: 30px;
+  }
+  
+  #portfolio img {
+	width: 100%;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+	transition: transform 0.3s ease; /* Add transition for smooth hover effect */
+  }
+  
+  #portfolio img:hover {
+	transform: scale(1.05); /* Scale image on hover */
+  }
+	  
+/* Animation for fade in */
+.fade-in {
+	opacity: 0; /* Initially hide elements */
+	transition: opacity 1s ease; /* Add smooth transition */
+  }
+  
+  .fade-in-visible {
+	opacity: 1; /* Make elements visible */
+  }
+
+/* Animation for swipe */
+.swipe-in {
+	animation: swipeIn ease-in-out 1; /* Apply animation */
+	animation-duration: 1s; /* Animation duration */
+  }
+  
+  @keyframes swipeIn {
+	0% {
+	  transform: translateX(100%); /* Start with full right */
+	}
+	100% {
+	  transform: translateX(0); /* End with no translation */
+	}
+  }
+  
+/* Testimonials styles */
+.testimonials {
+	position: relative;
+	overflow: hidden; /* Hide overflow to hide extra testimonials */
+	height: 200px; /* Adjust the height as needed */
+	margin: 0 auto; /* Center the container horizontally */
+	background-color: #fff; /* Set background color for testimonials section */
+	border-radius: 10px; /* Add border radius for a modern look */
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+  }
+  
+  .testimonial {
+	position: absolute;
+	top: 0;
+	left: 50%; /* Start position - center horizontally */
+	transform: translateX(-50%); /* Center horizontally */
+	width: 100%;
+	opacity: 0;
+	transition: opacity 1s ease;
+	padding: 20px; /* Add padding for testimonial content */
+	text-align: center; /* Center align content */
+  }
+  
+  .testimonial.active {
+	opacity: 1;
+  }
+
+/* Custom CSS */
+
+/* Responsive styles */
+@media (max-width: 768px) {
+	/* Adjust padding for smaller screens */
+	.py-md-5 {
+	  padding-top: 3rem !important;
+	  padding-bottom: 3rem !important;
+	}
+	.py-md-4 {
+	  padding-top: 2rem !important;
+	  padding-bottom: 2rem !important;
+	}
+	/* Center align text in headers */
+	h1, h2, h3, h4, h5, h6 {
+	  text-align: center;
+	}
+	/* Reduce font size for footer */
+	.footer p {
+	  font-size: 0.85rem;
+	}
+  }
