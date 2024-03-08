@@ -5,10 +5,6 @@ body {
 	padding-top: 56px;
   }
   
-  .banner img {
-	width: 100%;
-  }
-  
   section {
 	opacity: 0; /* Initially set opacity to 0 */
   }
@@ -32,6 +28,13 @@ body {
 	display: block;
   	max-height: 500px;
   	height: auto;
+  }
+  
+  .banner {
+	height: calc(100vh - 56px);
+	background-image: url('../Img/banner.jpg'); 
+	background-size: cover;
+	background-position: center;
   }
   
   /* Services Section Styles */
